@@ -1,0 +1,54 @@
+---
+title: "rHFA Guide"
+author: "Erik Killian"
+date: "2022-09-12"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+---
+
+
+# Introduction
+
+## Home Field Advantage in Plant Breeding
+
+Background of the HFA stat and why it's important.
+
+### How Home Field Advantage is Calculated
+
+HFA equation and a description. Could add some example data/code?
+
+# Guide
+
+## Step 1: Load dataset
+
+Data must be in long format containing the plant variety and data from each location. See the yield_data.csv example file. 
+
+
+## Step 2: ID home site
+
+```{r eval=FALSE}
+id_home(df = data_yield, year = "YEAR", geno = "LINE", pheno = "YIELD")
+```
+
+
+## Step 3: Get home site
+
+```{r}
+get_home_site(df = data_yield, geno = "LINE", site = "LOCATION")
+```
+
+
+## Step 4: Get Libraries
+
+
+
+## Step 5: Filter site-years
+
+## Step 6: Get SS
+
+## Step 7: Permute HFA
+
+## Step 8: Temporal HFA
